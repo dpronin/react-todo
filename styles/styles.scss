@@ -1,0 +1,51 @@
+
+@import url(http://fonts.googleapis.com/css?family=Bitter:300,400,700);
+@import 'animations';
+
+$font-stack: 4vh 'Bitter';
+
+.input[type="text"] {
+  height: 10vh;
+  width: 100%;
+  font: $font-stack;
+}
+
+.todos {
+  padding: 5vh;
+  list-style: none;
+}
+
+.list-item {
+  height: 10vh;
+  background-color: $secondary-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-color-hover;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+  .title {
+    padding: 5vh;
+    font: $font-stack;
+    user-select: none;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  &.done {
+    text-decoration: line-through;
+  }
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
