@@ -12,10 +12,6 @@ class ToDos extends Component {
     }
   }
 
-  componentDidUpdate() {
-
-  }
-
   handleKeyPress = (e) => {
     if (e.key === 'Enter' && e.target.value.length > 0) {
       var todos = this.state.todos;
