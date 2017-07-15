@@ -15,6 +15,7 @@ class ListItem extends Component {
   render() {
     return (
         <li className={`list-item fadeIn ${this.state.style}`}
+          tabIndex="0"
           aria-label={this.state.name}
           onClick={ (item) => {
             this.state.onClick(this.state.name, this.state.id);
