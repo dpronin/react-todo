@@ -9,18 +9,3 @@ $secondary-color-hover: #eee;
   from {opacity: 0}
   to {opacity: 1}
 }
-
-.removing {
-  animation: removing 0.3s;
-}
-@keyframes removing {
-  from {
-    opacity: 1;
-    color: $primary-color;
-  }
-  to {
-    opacity: 0;
-    height: 0;
-    color: $secondary-color;
-  }
-}

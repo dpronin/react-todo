@@ -14,9 +14,9 @@ class ListItem extends Component {
 
   render() {
     return (
-        <li className={`list-item fade-in ${this.state.style}`}
+        <li className={`list-item fadeIn ${this.state.style}`}
+          aria-label={this.state.name}
           onClick={ (item) => {
-            this.state.style = 'removing';
             this.state.onClick(this.state.name, this.state.id);
           }}>
           <div className="container">

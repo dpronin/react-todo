@@ -8,7 +8,6 @@ class ToDos extends Component {
       todos: [],
       placeholder: 'Enter todo name',
       done: [],
-      creating: true,
     }
   }
 
@@ -28,36 +27,26 @@ class ToDos extends Component {
   do = (name, id) => {
     var todos = this.state.todos;
     var done = this.state.done;
-    this.setState({
-      creating: false
-    });
     done.push({
       name: name,
       key : (Math.random() *  100).toString(32)
     })
-    setTimeout(() => {
-      this.setState({
-        todos: todos.filter(todo => todo.key != id),
-        done: done
-      });
-    }, 300);
+    this.setState({
+      todos: todos.filter(todo => todo.key != id),
+      done: done
+    });
   }
 
   delete = (name, id) => {
     var done = this.state.done;
     this.setState({
-      creating: false
+      done: done.filter(todo => todo.key != id),
     });
-    setTimeout(() => {
-      this.setState({
-        done: done.filter(todo => todo.key != id),
-      });
-    }, 300);
   }
 
   render() {
     return (
-      <div className = 'fade-in'>
+      <div className = 'fadeIn'>
         <input
         type="text"
         className = "input"
