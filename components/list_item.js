@@ -13,7 +13,6 @@ class ListItem extends Component {
   }
 
   handleKeyPress = (e) => {
-    console.log(e.key);
     if (e.key === 'Enter' || e.key === ' ') {
       this.state.onClick(this.state.name, this.state.id);
     }
