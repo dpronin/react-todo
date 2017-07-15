@@ -4,7 +4,7 @@ module.exports = options => {
   return {
     entry: './index.js',
     output: {
-      filename: 'bundle.js',
+      filename: 'static/bundle.js',
     },
     plugins: [
       new webpack.DefinePlugin({ // <-- key to reducing React's size
