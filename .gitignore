@@ -3,4 +3,3 @@ build
 dist
 .git
 package-lock.json
-bundle.js

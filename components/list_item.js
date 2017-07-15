@@ -12,6 +12,13 @@ class ListItem extends Component {
     };
   }
 
+  handleKeyPress = (e) => {
+    console.log(e.key);
+    if (e.key === 'Enter' || e.key === ' ') {
+      this.state.onClick(this.state.name, this.state.id);
+    }
+  }
+
   render() {
     return (
         <li className={`list-item fadeIn ${this.state.style}`}
@@ -19,6 +26,9 @@ class ListItem extends Component {
           aria-label={this.state.name}
           onClick={ (item) => {
             this.state.onClick(this.state.name, this.state.id);
+          }}
+          onKeyPress={ (item) => {
+            this.handleKeyPress(item);
           }}>
           <div className="container">
             <div className="title" >{this.state.name}</div>
